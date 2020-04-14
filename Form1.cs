@@ -47,7 +47,11 @@ namespace TicTacToe_v0._1
             Label lb = (Label)sender;
             int n = Convert.ToInt16(lb.Tag);
             if (n == 9)
+            {
                 game.NewGame();
+                label10.ForeColor = Color.DarkRed;
+                label10.Text = "Ходят крестики";
+            }
             else
             {
                 if (game.DefinePlayer(n) == "err")
